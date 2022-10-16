@@ -24,7 +24,7 @@ function PostPage({ post }) {
   return (
     <>
       <Head>
-        <title>{post.title} - My Blog</title>
+        <title>{`${post.title}  - My Blog`}</title>
       </Head>
       <main>
         <p>{post.date}</p>
