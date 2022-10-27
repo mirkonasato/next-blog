@@ -1,12 +1,12 @@
 import Head from 'next/head';
-import { getPost } from '../../lib/posts';
+import { getPost, getSlugs } from '../../lib/posts';
 
 export async function getStaticPaths() {
+  const slugs = await getSlugs();
   return {
-    paths: [
-      { params: { slug: 'first-post' } },
-      { params: { slug: 'second-post' } },
-    ],
+    paths: slugs.map((slug) => ({
+      params: { slug },
+    })),
     fallback: false,
   };
 }
