@@ -1,9 +1,25 @@
+/* Light Theme */
+:root {
+  --background-color: white;
+  --link-color: darkred;
+  --text-color: black;
+}
+
+/* Dark Theme */
+:root {
+  --background-color: rgb(14, 14, 14);
+  --link-color: rgb(234, 207, 3);
+  --text-color: rgb(230, 230, 230);
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 a {
-  color: darkred;
+  color: var(--link-color);
   text-decoration: none;
 }
 
