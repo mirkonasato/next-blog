@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 export async function getStaticProps() {
+  console.log('[FirstPostPage] getStaticProps()');
   return {
     props: {
       post: {
